@@ -3,7 +3,7 @@
 //! The position is an even round, creator to move, one X away from the column
 //! 2-4-6. Cell 8 is empty.
 
-use ply_for_maxim::{column_ready, land_batch, render, Attempt, Mark, Seat};
+use declared_ply::{column_ready, land_batch, render, Attempt, Mark, Seat};
 
 fn main() {
     let base = column_ready(3);

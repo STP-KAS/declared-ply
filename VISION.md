@@ -1,6 +1,6 @@
 # What vProgs is asking for, and what this guest already is
 
-Written for the tic-tac-toe guest. Pins are the ones read on 29 Sep 2026. A forum thread is not a KIP. A release-candidate branch is not a release. The hosted page is not the yellow paper.
+A public reading based on the tic-tac-toe guest. Pins are the ones read on 29 Sep 2026. A forum thread is not a KIP. A release-candidate branch is not a release. The hosted page is not the yellow paper.
 
 ## The goal
 
@@ -82,7 +82,7 @@ SilverScript is the language that compiles to that script. v1.0.0 is the tag `3e
 
 Argent is a language in front of SilverScript. It compiles `.ag` to `.sil`. Its authors still say it is under active development and not ready for general production. The GitHub has no release and no tag. Master on 26 Sep was `e76ee07`. A stable SilverScript tag does not make Argent ready. An expert reading the generated `.sil` is a narrower path than handing someone the `.ag`. Issue 64, still open on that read, says `argent-runtime` does not build against rusty-kaspa v2.1.0.
 
-vProgs sits behind that stack, not beside it as a rival. The coin rule that must be true for every full node is a covenant, written in script, which SilverScript and later Argent are for. The transition that does not fit 10,000 iterations, or that you do not want every node to re-execute, is a guest. KIP-16 is the hinge: the covenant checks a proof instead of replaying the guest. KIP-20 is how the deposit and the settlement stay on the same lineage. KIP-21 is how the proof quotes the program's own lane. Maxim's name is on that KIP. The guest he wrote is the program the lane is for.
+vProgs sits behind that stack, not beside it as a rival. The coin rule that must be true for every full node is a covenant, written in script, which SilverScript and later Argent are for. The transition that does not fit 10,000 iterations, or that you do not want every node to re-execute, is a guest. KIP-16 is the hinge: the covenant checks a proof instead of replaying the guest. KIP-20 is how the deposit and the settlement stay on the same lineage. KIP-21 is how the proof quotes the program's own lane. Its authors are Sutton, Maxim Biryukov, and Hans Moog. The tic-tac-toe guest at `098be674` is one program already carried on that kind of lane.
 
 The demo's covenant is not an Argent program. It is those delegate-script bytes plus the settlement redeem script. Argent becomes relevant the day someone wants that redeem script reviewed as source instead of as opcodes. It is not relevant to the board rules. The board rules are the guest, because a multi-round account, a pending ring, a pot, and an exit proof are past what the script meter is for.
 
@@ -107,7 +107,7 @@ This is the storm's missing referee, shrunk to the function the guest already ha
 
 The 25-step gap is that orphan wait. It is not the guest's turn TTL, which is a DAA deadline and a forfeit. Both are clocks. They answer different questions. The TTL forfeits a seat who went silent. The gap refuses a spend the node will reject as an orphan. The batch rule uses the gap so a too-soon resubmit is red and the seat does not move.
 
-Two holes at the same tip are recorded and not "fixed" here, because they are create-time and this crate starts from a playing match. `apply_create_game` rejects `rounds == 0`. `write_game` stores `rounds_total` and `stake` with no such check. `checked_sub(0)` succeeds, so a zero stake is a successful debit. Create in the JavaScript referee `blue-line-tictactoe` refuses both. The guest, as read, does not.
+Two holes at the same tip are recorded and not "fixed" here, because they are create-time and this crate starts from a playing match. `apply_create_game` rejects `rounds == 0`. `write_game` stores `rounds_total` and `stake` with no such check. `checked_sub(0)` succeeds, so a zero stake is a successful debit. This crate refuses a zero round count at create. The guest's `write_game`, as read, does not.
 
 ## Possibilities
 

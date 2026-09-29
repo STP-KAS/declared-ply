@@ -1,9 +1,9 @@
 [package]
-name = "ply-for-maxim"
+name = "declared-ply"
 version = "0.1.0"
 edition = "2021"
 publish = false
-description = "One landed ply out of a declared batch, beside the tic-tac-toe guest."
+description = "One landed ply out of a declared batch, read against the tic-tac-toe guest at 098be674."
 
 [[example]]
 name = "boards"
