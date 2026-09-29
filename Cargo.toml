@@ -1,0 +1,11 @@
+[package]
+name = "ply-for-maxim"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "One landed ply out of a declared batch, beside the tic-tac-toe guest."
+
+[[example]]
+name = "boards"
+
+[dependencies]
