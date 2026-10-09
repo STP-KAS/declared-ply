@@ -4,6 +4,8 @@ A public note based on the author of [biryukovmaxim/vprog-tictactoe](https://git
 
 The long reading is [VISION.md](VISION.md). The code is the part you can run.
 
+The 9 Oct 2026 workshop lab is [STP-KAS/vprog-sovereign](https://github.com/STP-KAS/vprog-sovereign). This note stays on guest `098be674`. [WORKSHOP.md](WORKSHOP.md).
+
 ## What
 
 Two pure functions for the same tic-tac-toe position.
